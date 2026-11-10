@@ -66,6 +66,7 @@ body {
     font-weight: 700;
     letter-spacing: 2px;
     color: $color-accent;
+    cursor: pointer;
   }
 
   &__nav {
@@ -306,4 +307,189 @@ body {
 
 .centered-text {
   text-align: center;
+}
+
+.portal-container {
+  max-width: 1100px;
+  min-height: 86vh;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 5rem;
+}
+
+.portal-header {
+  margin-bottom: 2rem;
+  border-bottom: 2px solid $color-text;
+  padding-bottom: 1rem;
+
+  .portal-tag {
+    font-family: $font-sans;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: $color-accent;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  .portal-main-title {
+    font-size: 2.2rem;
+    line-height: 1.2;
+    color: $color-text;
+  }
+}
+
+// GRID PRINCIPAL (2 Colunas: Esquerda grande, Direita empilhada)
+.portal-grid {
+  display: grid;
+  grid-template-columns: 2fr 1.2fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.portal-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+// ESTILO DOS CARDS
+.portal-card {
+  background-color: #ffffff;
+  border: 1px solid $color-border;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+  }
+
+  &__content {
+    padding: 2rem;
+
+    img {
+      width: 100%;
+      margin-bottom: 1rem;
+      border-radius: 2px;
+    }
+  }
+
+  &--main {
+    background-color: #ffffff; // Pode escurecer levemente se quiser destacar mais
+    .portal-card__content {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .portal-card__title {
+      font-size: 2rem;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+  }
+
+  &--side {
+    .portal-card__content {
+      padding: 1.5rem;
+    }
+    .portal-card__title {
+      font-size: 1.3rem;
+      line-height: 1.25;
+      margin-bottom: 0.5rem;
+    }
+    .portal-card__excerpt {
+      font-size: 0.9rem;
+      color: $color-text-muted;
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__category {
+    font-family: $font-sans;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: $color-accent;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 0.6rem;
+  }
+
+  &__excerpt {
+    font-size: 0.95rem;
+    color: $color-text-muted;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    text-indent: 0;
+  }
+
+  &__link {
+    font-family: $font-sans;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: $color-text;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.2s;
+
+    &:hover {
+      color: $color-accent;
+    }
+  }
+}
+
+.portal-banner {
+  background-size: cover;
+  background-position: center;
+  border-radius: 4px;
+  margin-bottom: 2rem;
+  overflow: hidden;
+  border: 1px solid $color-border;
+
+  &__overlay {
+    background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.8) 100%);
+    padding: 3rem 2rem;
+    color: #ffffff;
+  }
+
+  &__tag {
+    font-family: $font-sans;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #ffcccc;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  &__title {
+    font-size: 2.5rem;
+    line-height: 1.15;
+    margin-bottom: 0.4rem;
+    text-align: center;
+    color: #ffffff;
+  }
+
+  &__subtitle {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #e0e0e0;
+  }
+}
+
+// RESPONSIVIDADE MOBILE (Empilha tudo no celular)
+@media (max-width: 768px) {
+  .portal-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .portal-card--main .portal-card__title {
+    font-size: 1.6rem;
+  }
 }
