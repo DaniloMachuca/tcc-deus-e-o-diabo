@@ -1,59 +1,76 @@
 <!doctype html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Deus e o Diabo na Terra do Sol — Portal de Pesquisa</title>
-    <meta
-      name="description"
-      content="Portal de pesquisa acadêmica sobre o Cinema Novo e a obra de Glauber Rocha. Por Diego Alwan."
-    />
-    <link rel="stylesheet" href="./scss/main.scss" />
-  </head>
-  <body>
-    <!-- CABEÇALHO DA PÁGINA -->
-    <header class="header">
-      <div class="header__container">
-        <a class="header__brand" href="index.html">ANÁLISE CINEMATOGRÁFICA</a>
-        <nav class="header__nav">
-          <a href="index.html" class="header__link header__link--active"
-            >Início</a
-          >
-          <a href="article.html" class="header__link">Link 1</a>
-          <a href="" class="header__link">Link 2</a>
-          <a href="" class="header__link">Link 3</a>
-        </nav>
-      </div>
-    </header>
 
-    <!-- CONTAINER PRINCIPAL DO PORTAL -->
-    <main class="portal-container">
-      <!-- TOPO / CATEGORIA DO PORTAL -->
-      <section
-        class="portal-banner"
-        style="
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deus e o Diabo na Terra do Sol — Portal de Pesquisa</title>
+  <meta name="description"
+    content="Portal de pesquisa acadêmica sobre o Cinema Novo e a obra de Glauber Rocha. Por Diego Alwan." />
+  <link rel="stylesheet" href="./scss/main.scss" />
+</head>
+
+<body>
+  <!-- CABEÇALHO DA PÁGINA -->
+  <header class="header">
+    <div class="header__container">
+      <a class="header__brand" href="index.html">ANÁLISE CINEMATOGRÁFICA</a>
+      <nav class="header__nav">
+        <a href="index.html" class="header__link header__link--active">Início</a>
+        <a href="article.html" class="header__link">Link 1</a>
+        <a href="article2.html" class="header__link">Link 2</a>
+        <a href="" class="header__link">Link 3</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- CONTAINER PRINCIPAL DO PORTAL -->
+  <main class="portal-container">
+    <!-- TOPO / CATEGORIA DO PORTAL -->
+    <section class="portal-banner" style="
           background-image: url(&quot;https://placehold.co/1920x1080&quot;);
-        "
-      >
-        <div class="portal-banner__overlay">
-          <h1 class="portal-banner__title">Jornalismo Cultural</h1>
-        </div>
-      </section>
+        ">
+      <div class="portal-banner__overlay">
+        <h1 class="portal-banner__title">Jornalismo Cultural</h1>
+      </div>
+    </section>
 
-      <!-- GRID ESTILO CAPA DE JORNAL (BASEADO NO RASCUNHO) -->
-      <div class="portal-grid">
-        <!-- DESTAQUE PRINCIPAL (ESQUERDA - MAIOR) -->
-        <article
-          class="portal-card portal-card--main"
-          onclick="location.href = 'article.html'"
-        >
+    <!-- GRID ESTILO CAPA DE JORNAL (BASEADO NO RASCUNHO) -->
+    <div class="portal-grid">
+      <div class="portal-sidebar">
+        <article class="portal-card portal-card--main" onclick="location.href = 'article.html'">
           <div class="portal-card__content">
-            <img
-              src="https://placehold.co/600x400"
-              alt="Imagem de destaque"
-              class="portal-card__image"
-            />
-            <h2 class="portal-card__title">Reportagem 1</h2>
+            <img src="https://placehold.co/600x400" alt="Imagem de destaque" class="portal-card__image" />
+            <h2 class="portal-card__title">Deus e o Diabo na Terra do Sol: um Brasil que ainda está em debate</h2>
+            <p class="portal-card__excerpt">
+              lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+          </div>
+        </article>
+        <article class="portal-card portal-card--main" onclick="location.href = 'article.html'">
+          <div class="portal-card__content">
+            <img src="https://placehold.co/600x400" alt="Imagem de destaque" class="portal-card__image" />
+            <h2 class="portal-card__title">Quando um filme se torna clássico? O papel do jornalismo na memória
+              do cinema brasileiro</h2>
+            <p class="portal-card__excerpt">
+              lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+          </div>
+        </article>
+      </div>
+
+      <div class="portal-sidebar">
+        <!-- REPORTAGEM 2 -->
+        <article class="portal-card portal-card--side" onclick="location.href = 'article2.html'">
+          <div class="portal-card__content">
+            <img src="https://placehold.co/600x400" alt="Imagem de destaque" class="portal-card__image" />
+            <h3 class="portal-card__title">Reportagem 2</h3>
             <p class="portal-card__excerpt">
               lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -63,56 +80,42 @@
           </div>
         </article>
 
-        <!-- COLUNA DA DIREITA (DUAS SEÇÕES) -->
-        <div class="portal-sidebar">
-          <!-- REPORTAGEM 2 -->
-          <article
-            class="portal-card portal-card--side"
-            onclick="location.href = ''"
-          >
-            <div class="portal-card__content">
-              <img
-                src="https://placehold.co/600x400"
-                alt="Imagem de destaque"
-                class="portal-card__image"
-              />
-              <h3 class="portal-card__title">Reportagem 2</h3>
-              <p class="portal-card__excerpt">
-                lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
-              </p>
-            </div>
-          </article>
+        <!-- ENTREVISTA / VÍDEOS -->
+        <article class="portal-card portal-card--side" onclick="location.href = ''">
+          <div class="portal-card__content">
+            <img src="https://placehold.co/600x400" alt="Imagem de destaque" class="portal-card__image" />
+            <h3 class="portal-card__title">Entrevista</h3>
+            <p class="portal-card__excerpt">
+              lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+          </div>
+        </article>
 
-          <!-- ENTREVISTA / VÍDEOS -->
-          <article
-            class="portal-card portal-card--side"
-            onclick="location.href = ''"
-          >
-            <div class="portal-card__content">
-              <img
-                src="https://placehold.co/600x400"
-                alt="Imagem de destaque"
-                class="portal-card__image"
-              />
-              <h3 class="portal-card__title">Entrevista</h3>
-              <p class="portal-card__excerpt">
-                lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
-              </p>
-            </div>
-          </article>
-        </div>
+        <article class="portal-card portal-card--side" onclick="location.href = 'article2.html'">
+          <div class="portal-card__content">
+            <img src="https://placehold.co/600x400" alt="Imagem de destaque" class="portal-card__image" />
+            <h3 class="portal-card__title">Reportagem 2</h3>
+            <p class="portal-card__excerpt">
+              lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+          </div>
+        </article>
+
+
       </div>
-    </main>
+    </div>
+  </main>
 
-    <!-- RODAPÉ -->
-    <footer class="footer">
-      <p>Trabalho de Conclusão de Curso em Jornalismo</p>
-    </footer>
-  </body>
+  <!-- RODAPÉ -->
+  <footer class="footer">
+    <p>Trabalho de Conclusão de Curso em Jornalismo</p>
+  </footer>
+</body>
+
 </html>
