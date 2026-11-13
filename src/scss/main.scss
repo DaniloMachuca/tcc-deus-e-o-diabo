@@ -391,6 +391,10 @@ body {
       line-height: 1.2;
       margin-bottom: 1rem;
     }
+
+    .decorated {
+        text-decoration: underline;
+      }
   }
 
   &--side {
@@ -407,7 +411,11 @@ body {
       color: $color-text-muted;
       margin-bottom: 1rem;
     }
-  }
+
+    .decorated {
+        text-decoration: underline;
+      }
+  } 
 
   &__category {
     font-family: $font-sans;
