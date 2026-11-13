@@ -1,0 +1,62 @@
+@use "variables" as *;
+
+// ==========================================
+// HEADER (MENU FIXO)
+// ==========================================
+.header {
+  position: sticky;
+  top: 0;
+  background-color: rgba(252, 252, 249, 0.95);
+  border-bottom: 1px solid $color-border;
+  backdrop-filter: blur(5px);
+  z-index: 100;
+  padding: 0.8rem 1rem;
+
+  &__container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  &__brand {
+    font-family: $font-sans;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: $color-accent;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  &__nav {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    max-width: 100%;
+    padding-bottom: 0.2rem;
+
+    // Esconde a barra de rolagem feia no mobile mantendo a rolagem horizontal se necessário
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &__link {
+    font-family: $font-sans;
+    font-size: 0.75rem;
+    color: $color-text;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    transition: color 0.2s;
+
+    &:hover {
+      color: $color-accent;
+    }
+  }
+}

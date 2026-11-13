@@ -1,0 +1,92 @@
+@use "variables" as *;
+
+// ==========================================
+// MÍDIAS E LEGENDAS
+// ==========================================
+.media {
+  margin: 2rem 0;
+  text-align: center;
+
+  &__image,
+  &__video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 2px;
+  }
+
+  &__caption {
+    font-size: $font-size-caption;
+    color: $color-text-muted;
+    margin-top: 0.6rem;
+    text-align: left;
+    line-height: 1.4;
+    border-left: 2px solid $color-border;
+    padding-left: 0.8rem;
+  }
+}
+
+// ==========================================
+// CITAÇÕES E MANIFESTO
+// ==========================================
+.quote {
+  margin: 2.5rem 0;
+  padding: 1.5rem 2rem;
+  background-color: lighten($color-border, 8%);
+  border-left: 4px solid $color-accent;
+
+  &__text {
+    text-indent: 0 !important;
+    font-style: italic;
+    font-size: $font-size-quote;
+    margin-bottom: 0.5rem !important;
+  }
+
+  &__author {
+    font-family: $font-sans;
+    font-size: 0.85rem;
+    color: $color-text-muted;
+    display: block;
+  }
+}
+
+.manifesto-box {
+  background: #f4f2ed;
+  border: 1px solid $color-border;
+  padding: 1.8rem;
+  margin: 2rem 0;
+
+  &__title {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  &__list {
+    padding-left: 1.2rem;
+
+    li {
+      margin-bottom: 0.8rem;
+      font-size: $font-size-base;
+      text-align: justify;
+
+      em {
+        font-style: italic;
+      }
+    }
+  }
+}
+
+.interview-placeholder {
+  background-color: #f0eee9;
+  border: 1px dashed #bbb;
+  padding: 1.5rem;
+  text-align: center;
+  margin: 2rem 0;
+
+  &__tag {
+    font-family: $font-sans;
+    font-size: 0.85rem;
+    color: $color-accent;
+    font-weight: bold;
+  }
+}
