@@ -65,3 +65,45 @@
     }
   }
 }
+
+
+// ==========================================
+// ESTILOS DA PÁGINA DE ENTREVISTA
+// ==========================================
+
+.interview-block {
+  margin: 2.5rem 0;
+}
+
+.interview__qa {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid $color-border;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.interview__question {
+  font-family: $font-academic;
+  font-size: 1.35rem;
+  line-height: 1.35;
+  color: $color-text;
+  margin-bottom: 0.8rem;
+  font-weight: 700;
+}
+
+.interview__answer {
+  font-family: $font-academic;
+  font-size: $font-size-base;
+  line-height: 1.6;
+  color: $color-text;
+  text-align: justify;
+  text-indent: 1.5rem;
+
+  // Garante que a primeira linha logo após a pergunta não fique recuada
+  &::first-line {
+    text-indent: 0;
+  }
+}
